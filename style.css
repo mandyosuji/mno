@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif; 
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #452743;
+}
+
+a:hover {
+    color: #d7de50;
+}
+
+.logo:hover {
+    color: #452743;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.logo {
+    font-family: "chantal", sans-serif;
+    font-size: 2rem;
+}
+
