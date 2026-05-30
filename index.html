@@ -1,16 +1,164 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://use.typekit.net/frp5ffn.css">
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <nav class="navbar">
-            <ul>
-                <li><a class="nav-item" href=#>index</a></li>
-                <li><a class="logo" href=#>EM—EN–OH!</a></li>
-                <li><a class="nav-item"href=#>contact</a></li>
-            </ul>
-        </nav>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mno</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/frp5ffn.css">
+</head>
+<body>
+
+  <div class="horizontal-nav">
+    <div class="container">
+      <div><a href=#>index</a></div>
+      <div class="logo"><a href=#>EM—EN–oH!</a></div>
+      <div><a href=#>more</a></div> 
+      <!-- inspirations, explanation of em–en–oh!, contact info (email?) -->
+    </div>
+  </div>
+
+  <section class="page-section">
+    <h2 class="section-title">Hello, I'm Mandy Osuji.</h2>
+    <p class="section-body">
+      My creative work often circles the theme of memory and its lifecycle.
+      I enjoy different forms and have done projects across mediums, including
+      fabric, the web, writing, and sound. This is a home for said projects.
+    </p>
+  </section>
+
+  <!-- ─── Vertical Nav ─────────────────────────────────── -->
+  <nav class="vertical-nav" aria-label="Section navigation">
+    <div class="nav-item active" data-target="s1">
+      <span class="nav-label">Identity</span>
+      <span class="nav-dot"></span>
+    </div>
+    <div class="nav-item" data-target="s2">
+      <span class="nav-label">Body</span>
+      <span class="nav-dot"></span>
+    </div>
+    <div class="nav-item" data-target="s3">
+      <span class="nav-label">Family</span>
+      <span class="nav-dot"></span>
+    </div>
+    <div class="nav-item" data-target="s4">
+      <span class="nav-label">School</span>
+      <span class="nav-dot"></span>
+    </div>
+    <div class="nav-item" data-target="s5">
+      <span class="nav-label">Future</span>
+      <span class="nav-dot"></span>
+    </div>
+    <div class="nav-item" data-target="s6">
+      <span class="nav-label">World</span>
+      <span class="nav-dot"></span>
+    </div>
+    <div class="nav-item" data-target="s7">
+      <span class="nav-label">Yale</span>
+      <span class="nav-dot"></span>
+    </div>
+  </nav>
+
+  <!-- ─── Sections ─────────────────────────────────────── -->
+  <main>
+    <section class="page-section" id="s1">
+      <p class="section-number">01 — Identity</p>
+      <h2 class="section-title">Who are you at eighteen?</h2>
+      <p class="section-body">
+        At eighteen, identity is still forming — shaped by friendships,
+        family expectations, the neighborhoods you grew up in, and the
+        futures you've started to imagine for yourself.
+      </p>
+    </section>
+
+    <section class="page-section" id="s2">
+      <p class="section-number">02 — Body</p>
+      <h2 class="section-title">Learning to live in your own skin.</h2>
+      <p class="section-body">
+        The body at eighteen carries the marks of childhood and the
+        anxiety of adulthood. It is scrutinized, celebrated, misunderstood,
+        and slowly, tentatively, owned.
+      </p>
+    </section>
+
+    <section class="page-section" id="s3">
+      <p class="section-number">03 — Family</p>
+      <h2 class="section-title">The pull of where you come from.</h2>
+      <p class="section-body">
+        Home is simultaneously the place you want to escape and the
+        anchor you'll spend years understanding. At eighteen, that tension
+        is at its most acute.
+      </p>
+    </section>
+
+    <section class="page-section" id="s4">
+      <p class="section-number">04 — School</p>
+      <h2 class="section-title">What it means to keep learning.</h2>
+      <p class="section-body">
+        High school ends. Something else begins. The classroom expands —
+        or disappears entirely — and the question of what education is for
+        becomes suddenly very real.
+      </p>
+    </section>
+
+    <section class="page-section" id="s5">
+      <p class="section-number">05 — Future</p>
+      <h2 class="section-title">Staring down the years ahead.</h2>
+      <p class="section-body">
+        The future at eighteen is vast and terrifying and full of possibility.
+        Plans feel both urgent and arbitrary. Everything seems to hinge on
+        choices you're not sure you're ready to make.
+      </p>
+    </section>
+
+    <section class="page-section" id="s6">
+      <p class="section-number">06 — World</p>
+      <h2 class="section-title">Arriving just as everything shifts.</h2>
+      <p class="section-body">
+        Each generation inherits the world at a particular moment in history.
+        To be eighteen now is to grow up inside a specific set of anxieties,
+        hopes, and contradictions that are entirely your own.
+      </p>
+    </section>
+
+    <section class="page-section" id="s7">
+      <p class="section-number">07 — Yale</p>
+      <h2 class="section-title">Arriving just as everything shifts.</h2>
+      <p class="section-body">
+        Each generation inherits the world at a particular moment in history.
+        To be eighteen now is to grow up inside a specific set of anxieties,
+        hopes, and contradictions that are entirely your own.
+      </p>
+    </section>
+  </main>
+
+  <!-- ─── Script ───────────────────────────────────────── -->
+  <script>
+    const items = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('.page-section');
+
+    // Click → scroll to section
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const target = document.getElementById(item.dataset.target);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Scroll → highlight active item
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          items.forEach(item => {
+            item.classList.toggle('active', item.dataset.target === id);
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
 </html>

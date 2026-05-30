@@ -1,32 +1,189 @@
+/* ─── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    font-family: sans-serif; 
+  font-family: 'Georgia', serif;
+  background: #f9f7f2;
+  color: #111;
+}
+/* ─── Top Horizontal Nav ───────────────────────────────────────── */
+.horizontal-nav {
+  position: sticky;
+  top: 0;
+  background: #f9f7f2;
 }
 
-a:link, a:visited {
-    text-decoration: none;
-    color: #452743;
+.horizontal-nav .container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 10px 20px;
+  position: relative;
 }
 
-a:hover {
-    color: #d7de50;
+.horizontal-nav .container > div {
+  flex: 1;  /* each div takes equal space */
 }
 
-.logo:hover {
-    color: #452743;
+.horizontal-nav .container > div:nth-child(2) {
+  text-align: center;  /* logo centered in its third */
 }
 
-.navbar ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    padding: 10px 20px;
-    margin: 0;
+.horizontal-nav .container > div:last-child {
+  text-align: right;  /* right item pushed to the right */
+}
+
+.horizontal-nav a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.horizontal-nav a:hover {
+  color: #d7de50;
 }
 
 .logo {
-    font-family: "chantal", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 2rem;
+  font-family: "chantal", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 2rem;
 }
+
+/* ─── Vertical Nav ───────────────────────────────────────── */
+.vertical-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  gap: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* thin vertical line running behind the dots */
+/* .vertical-nav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 60%;
+  background: #ccc;
+  z-index: 0;
+} */
+
+/* ─── Each nav item ──────────────────────────────────────── */
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 14px 0;
+  z-index: 1;
+  flex-direction: column;
+  pointer-events: all;
+}
+
+/* dot */
+.nav-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 1.5px solid #ccc;
+  flex-shrink: 0;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.nav-item.active .nav-dot {
+  background: #111;
+  border-color: #111;
+  transform: scale(1.35);
+}
+
+/* label — rotated, appears on hover / active */
+.nav-label {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+
+  /* after rotate, shift so text floats to the left of the dot */
+  left: auto;
+  right: 100%;
+  margin-right: 12px;
+  transform: rotate(-90deg) translateX(70%);
+  transform-origin: right center;
+
+  white-space: nowrap;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* show label on hover or active */
+.nav-item:hover .nav-label,
+.nav-item.active .nav-label {
+  opacity: 1;
+}
+
+.nav-item.active .nav-label {
+  color: #111;
+}
+
+/* ─── Demo page sections ─────────────────────────────────── */
+.page-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 120px 200px 200px;
+  /* border-bottom: 1px solid #e5e0d8; */
+}
+
+/* .page-section:nth-child(even) {
+  background: #f1ede4;
+} */
+
+.section-number {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+.section-body {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  max-width: 580px;
+  color: #333;
+}
+
+/* ─── Scrollbar (subtle) ─────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #d7de50; border-radius: 2px; }
