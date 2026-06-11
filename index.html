@@ -19,11 +19,14 @@
   </div>
 
   <section class="page-section">
-    <h2 class="section-title">Hello, I'm Mandy Osuji.</h2>
+    <h2 class="section-title"><span class="logo big">EM—EN–oH!</span> 
+      <br>is a space to collect and track my creative projects: 
+    across fabric, the web, writing, and sound.</h2>
+    
     <p class="section-body">
-      My creative work often circles the theme of memory and its lifecycle.
+      <!-- My creative work often circles the theme of memory and its lifecycle.
       I enjoy different forms and have done projects across mediums, including
-      fabric, the web, writing, and sound. This is a home for said projects.
+      fabric, the web, writing, and sound. Here is a chronicle of them. -->
     </p>
   </section>
 
@@ -141,7 +144,7 @@
     items.forEach(item => {
       item.addEventListener('click', () => {
         const target = document.getElementById(item.dataset.target);
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
+        if (target) target.scrollIntoView({ behavior: 'instant' });
       });
     });
 

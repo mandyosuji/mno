@@ -49,6 +49,10 @@ body {
   font-size: 2rem;
 }
 
+.big{
+  font-size: 4rem;
+}
+
 /* ─── Vertical Nav ───────────────────────────────────────── */
 .vertical-nav {
   position: fixed;
