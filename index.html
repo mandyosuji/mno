@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <div class="horizontal-nav">
+  <div class="menu">
     <div class="container">
       <div><a href=#>index</a></div>
       <div class="logo"><a href=#>EM—EN–oH!</a></div>
@@ -18,49 +18,42 @@
     </div>
   </div>
 
+  <!-- SHAPES -->
   <section class="page-section">
-    <h2 class="section-title"><span class="logo big">EM—EN–oH!</span> 
-      <br>is a space to collect and track my creative projects: 
-    across fabric, the web, writing, and sound.</h2>
-    
-    <p class="section-body">
-      <!-- My creative work often circles the theme of memory and its lifecycle.
-      I enjoy different forms and have done projects across mediums, including
-      fabric, the web, writing, and sound. Here is a chronicle of them. -->
-    </p>
+  <!-- <div class="circle"></div> -->
+  <div class="oval">
+    <svg class="oval-border" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="50%" cy="50%" rx="calc(50% - 1px)" ry="calc(50% - 1px)" />
+    </svg>
+    <p>touch</p>
+  </div>
+
+  <div class="square">
+    <svg class="square-border" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="298" height="298" />
+    </svg>
+    <p>read</p>
+  </div>
+
+  <div class="triangle">
+    <svg class="triangle-border" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="150,1 299,299 1,299" />
+    </svg>
+    <p>listen</p>
+  </div>
+
+  <div class="semicircle">
+    <svg class="semicircle-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+      <path d="M 2,199 L 398,199 A 198,198 0 0,0 2,199 Z" />
+    </svg>
+    <p>see</p>
+  </div>
+
+
   </section>
 
-  <!-- ─── Vertical Nav ─────────────────────────────────── -->
-  <nav class="vertical-nav" aria-label="Section navigation">
-    <div class="nav-item active" data-target="s1">
-      <span class="nav-label">Identity</span>
-      <span class="nav-dot"></span>
-    </div>
-    <div class="nav-item" data-target="s2">
-      <span class="nav-label">Body</span>
-      <span class="nav-dot"></span>
-    </div>
-    <div class="nav-item" data-target="s3">
-      <span class="nav-label">Family</span>
-      <span class="nav-dot"></span>
-    </div>
-    <div class="nav-item" data-target="s4">
-      <span class="nav-label">School</span>
-      <span class="nav-dot"></span>
-    </div>
-    <div class="nav-item" data-target="s5">
-      <span class="nav-label">Future</span>
-      <span class="nav-dot"></span>
-    </div>
-    <div class="nav-item" data-target="s6">
-      <span class="nav-label">World</span>
-      <span class="nav-dot"></span>
-    </div>
-    <div class="nav-item" data-target="s7">
-      <span class="nav-label">Yale</span>
-      <span class="nav-dot"></span>
-    </div>
-  </nav>
+  <!-- TITLES -->
+  
 
   <!-- ─── Sections ─────────────────────────────────────── -->
   <main>
@@ -134,34 +127,6 @@
       </p>
     </section>
   </main>
-
-  <!-- ─── Script ───────────────────────────────────────── -->
-  <script>
-    const items = document.querySelectorAll('.nav-item');
-    const sections = document.querySelectorAll('.page-section');
-
-    // Click → scroll to section
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        const target = document.getElementById(item.dataset.target);
-        if (target) target.scrollIntoView({ behavior: 'instant' });
-      });
-    });
-
-    // Scroll → highlight active item
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          items.forEach(item => {
-            item.classList.toggle('active', item.dataset.target === id);
-          });
-        }
-      });
-    }, { threshold: 0.5 });
-
-    sections.forEach(s => observer.observe(s));
-  </script>
 
 </body>
 </html>
