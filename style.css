@@ -1,29 +1,28 @@
-/* ─── Reset ─────────────────────────────────────────────── */
+/* reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* across-the-board body styling */
 body {
   font-family: 'Georgia', serif;
   background: #f9f7f2;
   color: #111;
 }
 
-/* ─── Scrollbar (subtle) ─────────────────────────────────── */
+/* scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-thumb { background: #d7de50; border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: #61210F; border-radius: 2px; }
 
-/* ─── top menu ───────────────────────────────────────── */
+/* menu (index, logo, more) */
+
 .menu {
   position: sticky;
   top: 0;
-  /* background: #f9f7f2; */
 }
 
 .menu .container {
   display: flex;
   align-items: center;
-  list-style-type: none;
   padding: 10px 20px;
-  position: relative;
 }
 
 .menu .container > div {
@@ -39,12 +38,12 @@ body {
 }
 
 .menu a:link, a:visited {
-  text-decoration: none;
+  text-decoration: none;  /* no underline */
   color: black;
 }
 
 .menu a:hover {
-  color: #d7de50;
+  color: #61210F;
 }
 
 .logo {
@@ -54,19 +53,15 @@ body {
   font-size: 2rem;
 }
 
-/* ─── page sections ─────────────────────────────────── */
+/* page sections */
+
 .page-section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 80px 120px 200px 200px;
-  /* border-bottom: 1px solid #e5e0d8; */
 }
-
-/* .page-section:nth-child(even) {
-  background: #f1ede4;
-} */
 
 .section-number {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -89,7 +84,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.75;
   max-width: 580px;
-  color: #333;
+  color: black;
 }
 
 /* ─── circle? ─────────────────────────────────── */
@@ -180,6 +175,7 @@ body {
   &:hover {
     border: none;
     background-color: #d7de50;
+    z-index: 10;
 
     .oval-border {
       display: block;
@@ -228,6 +224,7 @@ body {
   &:hover {
     border: none;
     background-color: #dedaed;
+    z-index: 10;
 
     .square-border {
       display: block;
@@ -272,7 +269,8 @@ body {
   }
 
   &:hover {
-    background-color: #f2554d;
+    background-color: #FB8F37;
+    z-index: 10;
 
     .triangle-border polygon {
       stroke-dasharray: 4 4;
@@ -314,6 +312,7 @@ body {
 
   &:hover .semicircle-border path {
     fill: #cae9f5;
+    z-index: 10;
     stroke-dasharray: 4 4;
     animation: dashOffset 0.1s infinite linear;
   }
