@@ -53,6 +53,10 @@ body {
   font-size: 2rem;
 }
 
+#logo-link:hover {
+  color: black;
+}
+
 /* page sections */
 
 .page-section {
@@ -263,11 +267,6 @@ body {
     }
   }
 
-  p {
-    position: relative;
-    padding-top: 60px;
-  }
-
   &:hover {
     background-color: #FB8F37;
     z-index: 10;
@@ -328,6 +327,6 @@ body {
 
 .triangle p {
   transform: rotate(-30deg);
-  padding-top: 110px;
-  margin-left: -80px;
+  padding-top: 120px;
+  margin-left: -75px;
 }
