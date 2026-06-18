@@ -4,15 +4,14 @@
 /* across-the-board body styling */
 body {
   font-family: 'Georgia', serif;
-  background: #f9f7f2;
   color: #111;
 }
 
 /* scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-thumb { background: #61210F; border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: #556F44; border-radius: 2px; }
 
-/* menu (index, logo, more) */
+/* –––––– menu (index, logo, more) ––––––––––– */
 
 .menu {
   position: sticky;
@@ -43,7 +42,7 @@ body {
 }
 
 .menu a:hover {
-  color: #61210F;
+  color: #556F44;
 }
 
 .logo {
@@ -57,94 +56,7 @@ body {
   color: black;
 }
 
-/* page sections */
-
-.page-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 120px 200px 200px;
-}
-
-.section-number {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #999;
-  margin-bottom: 20px;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 400;
-  line-height: 1.1;
-  max-width: 700px;
-  margin-bottom: 24px;
-}
-
-.section-body {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  max-width: 580px;
-  color: black;
-}
-
-/* ─── circle? ─────────────────────────────────── */
-.circle {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 1px solid #333;
-  position: relative;
-
-  &:hover {
-    border: none;
-    cursor: pointer;
-    background-color: #d7de50;
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 50%;
-      border: 1px dashed #333;
-      animation: marchingAnts 0.4s infinite linear;
-    }
-  }
-}
-
-@keyframes marchingAnts {
-  from { transform: rotate(360deg); }
-  to   { transform: rotate(0deg); }
-}
-/* .circle {
-  width: 300px;
-  height: 425px;
-  border: 1px solid #333;
-
-  &:hover {
-      border: none;
-      background: 
-          linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
-          linear-gradient(90deg, #333 50%, transparent 0) repeat-x,
-          linear-gradient(0deg, #333 50%, transparent 0) repeat-y,
-          linear-gradient(0deg, #333 50%, transparent 0) repeat-y;
-      background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
-      background-position: 0 0, 0 100%, 0 0, 100% 0;
-  }
-}
-
-.circle:hover {
-  animation: linearGradientMove .1s infinite linear;
-}
-
-@keyframes linearGradientMove {
-  100% {
-      background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
-  }
-} */
+/* ─── oval ───────────── */
 
 .oval {
   width: 300px;
@@ -176,6 +88,10 @@ body {
     }
   }
 
+  p {
+    rotate: 20deg; /* opposite of the oval's -20deg */
+  }
+
   &:hover {
     border: none;
     background-color: #d7de50;
@@ -195,6 +111,8 @@ body {
   from { stroke-dashoffset: 0; }
   to   { stroke-dashoffset: -8; }
 }
+
+/* ─── square ───────────── */
 
 .square {
   width: 300px;
@@ -225,6 +143,10 @@ body {
     }
   }
 
+  p {
+    transform: rotate(-30deg); /* opposite of the square's 30deg */
+  }
+
   &:hover {
     border: none;
     background-color: #dedaed;
@@ -239,6 +161,8 @@ body {
     }
   }
 }
+
+/* ─── triangle ───────────── */
 
 .triangle {
   width: 300px;
@@ -267,6 +191,12 @@ body {
     }
   }
 
+  p {
+    transform: rotate(-30deg);
+    padding-top: 120px;
+    margin-left: -75px;
+  }
+
   &:hover {
     background-color: #FB8F37;
     z-index: 10;
@@ -277,6 +207,8 @@ body {
     }
   }
 }
+
+/* ─── semicircle ───────────── */
 
 .semicircle {
   width: 400px;
@@ -317,16 +249,36 @@ body {
   }
 }
 
-.oval p {
-  rotate: 20deg; /* opposite of the oval's -20deg */
+/* page sections */
+
+/* .page-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 120px 200px 200px;
 }
 
-.square p {
-  transform: rotate(-30deg); /* opposite of the square's 30deg */
+.section-number {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
 }
 
-.triangle p {
-  transform: rotate(-30deg);
-  padding-top: 120px;
-  margin-left: -75px;
+.section-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  max-width: 700px;
+  margin-bottom: 24px;
 }
+
+.section-body {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  max-width: 580px;
+  color: black;
+} */
