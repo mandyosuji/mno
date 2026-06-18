@@ -7,10 +7,6 @@ body {
   color: #111;
 }
 
-/* scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-thumb { background: #556F44; border-radius: 2px; }
-
 /* –––––– menu (index, logo, more) ––––––––––– */
 
 .menu {
