@@ -88,6 +88,11 @@ a:link, a:visited {
     rotate: 20deg; /* opposite of the oval's -20deg */
   }
 
+  a {
+    position: absolute;
+    inset: 0;
+  }
+
   &:hover {
     border: none;
     background-color: #d7de50;
@@ -143,6 +148,11 @@ a:link, a:visited {
     transform: rotate(-30deg); /* opposite of the square's 30deg */
   }
 
+  a {
+    position: absolute;
+    inset: 0;
+  }
+
   &:hover {
     border: none;
     background-color: #dedaed;
@@ -193,6 +203,11 @@ a:link, a:visited {
     margin-left: -75px;
   }
 
+  a {
+    position: absolute;
+    inset: 0;
+  }
+
   &:hover {
     background-color: #FB8F37;
     z-index: 10;
@@ -235,6 +250,11 @@ a:link, a:visited {
   p {
     position: relative;
     rotate: 30deg;
+  }
+
+  a {
+    position: absolute;
+    inset: 0;
   }
 
   &:hover .semicircle-border path {
