@@ -1,51 +1,15 @@
 /* reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* across-the-board styling */
+
 html {
   background-color: #d7de50;
 }
 
-/* across-the-board styling */
 body {
   font-family: Helvetica, sans-serif;
   color: #111;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 120px 200px 200px;
-}
-
-.link {
-  margin-right: 8px;
-}
-
-/* –––––– menu (index, logo, more) ––––––––––– */
-
-.menu {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.menu .container {
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-}
-
-.menu .container > div {
-  flex: 1;  /* each div takes equal space */
-}
-
-.menu .container > div:nth-child(2) {
-  text-align: center;  /* logo centered in its third */
-}
-
-.menu .container > div:last-child {
-  text-align: right;  /* right item pushed to the right */
 }
 
 a:link, a:visited {
@@ -53,20 +17,53 @@ a:link, a:visited {
   color: black;
 }
 
+/* .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 120px 200px 200px;
+} */
+
+/* .link {
+  margin-right: 8px;
+} */
+
+/* –––––– menu (index, logo, more) ––––––––––– */
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
 .menu a:hover {
   color: #556F44;
 }
 
-/* ─── logo ───────────── */
+/* ─── logo mark ───────────── */
 .mark {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 15px;
+  margin: 15px;
+}
+
+.loop {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.mark:hover .loop {
+  opacity: 1;
+  z-index: -1;
 }
 
 
-/* ─── big intro ───────────── */
+/* ─── big text intro ───────────── */
 
 .intro {
   max-width: 650px;
