@@ -1,9 +1,13 @@
 /* reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+  background-color: #d7de50;
+}
+
 /* across-the-board styling */
 body {
-  font-family: 'Georgia', serif;
+  font-family: Helvetica, sans-serif;
   color: #111;
 }
 
@@ -21,8 +25,9 @@ body {
 /* –––––– menu (index, logo, more) ––––––––––– */
 
 .menu {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .menu .container {
@@ -50,6 +55,28 @@ a:link, a:visited {
 
 .menu a:hover {
   color: #556F44;
+}
+
+/* ─── logo ───────────── */
+.mark {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+
+
+/* ─── big intro ───────────── */
+
+.intro {
+  max-width: 650px;
+  font-size: 3rem;
+  margin: 20px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  position: absolute;
+  left: 40%;
+  top: 25%;
 }
 
 /* ─── oval ───────────── */
