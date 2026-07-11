@@ -22,7 +22,7 @@ a:link, a:visited {
 
 .menu {
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -36,10 +36,9 @@ a:link, a:visited {
 /* ─── logo mark ───────────── */
 .mark {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
-  margin-top: 15px;
-  margin-right: 30px;
+  margin-right: 20px;
   width: 40px;
   height: 40px;
   transition: transform 0.5s ease-in-out; 
