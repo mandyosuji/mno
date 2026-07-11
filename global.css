@@ -9,24 +9,14 @@ html {
 
 body {
   font-family: Helvetica, sans-serif;
-  color: #111;
+  color: #4a2545;
+  font-weight: 600;
 }
 
 a:link, a:visited {
   text-decoration: none;  /* no underline */
-  color: #111;
+  color: #4a2545;
 }
-
-/* .section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 120px 200px 200px;
-} */
-
-/* .link {
-  margin-right: 8px;
-} */
 
 /* –––––– menu (index, more) ––––––––––– */
 
@@ -55,275 +45,74 @@ a:link, a:visited {
   transition: transform 0.5s ease-in-out; 
 }
 
+.mark path {
+  /* fill: #4a2545; */
+  /* fill: blue; */
+}
+
 .mark:hover path {
-  fill: blue
+  fill: blue;
+  /* fill: #4a2545; */
 }
 
-/* .mark img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hover-img {
-  opacity: 0;
-}
-
-.mark:hover .default-img {
-  opacity: 0;
-}
-
-.mark:hover .hover-img {
-  opacity: 1;
-} */
-
-/* .loop {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-}
-
-.mark:hover .loop {
-  opacity: 1;
-  z-index: -1;
-} */
+/* ─── photo of me ───────────── */
 
 .portrait {
-  width: 300px;
   position: absolute;
   top: 18%;
   left: 8%;
 }
 
 .portrait img {
-  width: 400px;
+  width: 25vw;
 }
 
-/* ─── big text intro ───────────── */
+/* ─── main page text ───────────── */
 
 .intro {
   max-width: 650px;
   font-size: 3rem;
   margin: 20px;
   font-family: Helvetica, sans-serif;
-  font-weight: 600;
   position: absolute;
   left: 40%;
   top: 25%;
   pointer-events: none;
 }
 
-/* ─── oval ───────────── */
+/* ─── links to sections ───────────── */
 
-/* .oval {
-  width: 300px;
-  height: 425px;
+.page-link {
+  font-size: 1.5rem;
   position: absolute;
-  top: 35%;
-  left: 14%;
-  border: 1px solid #333;
-  border-radius: 50%;
-  rotate: -20deg;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .oval-border {
-    display: none;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    ellipse {
-      fill: none;
-      stroke: #333;
-      stroke-width: 1;
-      stroke-dasharray: 4 4;
-    }
-  }
-
-  p {
-    rotate: 20deg;
-  }
-
-  a {
-    position: absolute;
-    inset: 0;
-  }
-
-  &:hover {
-    border: none;
-    background-color: #d7de50;
-    z-index: 10;
-
-    .oval-border {
-      display: block;
-
-      ellipse {
-        animation: dashOffset 0.1s infinite linear;
-      }
-    }
-  }
+  left: 40%;
+  top: 50%;
+  margin: 20px;
+  display: block;
 }
 
-@keyframes dashOffset {
-  from { stroke-dashoffset: 0; }
-  to   { stroke-dashoffset: -8; }
-} */
-
-/* ─── square ───────────── */
-
-/* .square {
-  width: 300px;
-  height: 300px;
+/* .page-link .feel {
   position: absolute;
-  top: 30%;
-  left: 32%;
-  transform: rotate(30deg);
-  border: 1px solid #333;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 70%;
+  left: 10%
+}
 
-  .square-border {
-    display: none;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    rect {
-      fill: none;
-      stroke: #333;
-      stroke-width: 1;
-      stroke-dasharray: 4 4;
-    }
-  }
-
-  p {
-    transform: rotate(-30deg);
-  }
-
-  a {
-    position: absolute;
-    inset: 0;
-  }
-
-  &:hover {
-    border: none;
-    background-color: #dedaed;
-    z-index: 10;
-
-    .square-border {
-      display: block;
-
-      rect {
-        animation: dashOffset 0.1s infinite linear;
-      }
-    }
-  }
-} */
-
-/* ─── triangle ───────────── */
-
-/* .triangle {
-  width: 300px;
-  height: 300px;
+.page-link .read {
   position: absolute;
-  transform: rotate(30deg);
-  top: 20%;
-  left: 54%;
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 60%;
+  left: 40%
+}
 
-  .triangle-border {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    polygon {
-      fill: none;
-      stroke: #333;
-      stroke-width: 1;
-    }
-  }
-
-  p {
-    transform: rotate(-30deg);
-    padding-top: 120px;
-    margin-left: -75px;
-  }
-
-  a {
-    position: absolute;
-    inset: 0;
-  }
-
-  &:hover {
-    background-color: #FB8F37;
-    z-index: 10;
-
-    .triangle-border polygon {
-      stroke-dasharray: 4 4;
-      animation: dashOffset 0.1s infinite linear;
-    }
-  }
-} */
-
-/* ─── semicircle ───────────── */
-
-/* .semicircle {
-  width: 400px;
-  height: 200px;
+.page-link .click {
   position: absolute;
-  top: 45%;
-  left: 59%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  rotate: -30deg;
+  top: 85%;
+  left: 50%
+}
 
-  .semicircle-border {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    path {
-      fill: none;
-      stroke: #333;
-      stroke-width: 1;
-    }
-  }
-
-  p {
-    position: relative;
-    rotate: 30deg;
-  }
-
-  a {
-    position: absolute;
-    inset: 0;
-  }
-
-  &:hover .semicircle-border path {
-    fill: #cae9f5;
-    z-index: 10;
-    stroke-dasharray: 4 4;
-    animation: dashOffset 0.1s infinite linear;
-  }
+.page-link .hear {
+  position: absolute;
+  top: 70%;
+  left: 10%
 } */
 
 /* page sections */
