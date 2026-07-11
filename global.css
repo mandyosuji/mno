@@ -54,12 +54,12 @@ a:link, a:visited {
 
 .portrait {
   position: absolute;
-  top: 18%;
+  top: 20%;
   left: 8%;
 }
 
 .portrait img {
-  width: 25vw;
+  width: 375px;
 }
 
 /* ─── main page text ───────────── */
@@ -75,15 +75,28 @@ a:link, a:visited {
   pointer-events: none;
 }
 
-/* ─── links to sections ───────────── */
+/* ─── links to sub-sections ───────────── */
 
-.page-link {
+.subsection-link {
   font-size: 1.5rem;
   position: absolute;
   left: 40%;
   top: 50%;
   margin: 20px;
-  display: block;
+  font-weight:400;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.subsection-link a {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.subsection-link a:hover {
+  color: blue;
 }
 
 /* .page-link .feel {
