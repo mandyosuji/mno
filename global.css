@@ -3,10 +3,11 @@
 
 /* across-the-board styling */
 
-/* background-color: #d7de50; */
+
 
 html, body, a {
   cursor: none;
+  /* background-color: #d7de50; */
 }
 
 .cursor {
@@ -15,10 +16,11 @@ html, body, a {
   border-radius: 50%;
   background: #d7de50;
   mix-blend-mode: exclusion;
-  position: fixed;
+  position: fixed; 
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .cursor.active {
@@ -45,7 +47,8 @@ a:link, a:visited {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 5px 20px;
+  align-items: center;
 }
 
 .menu a:hover {
@@ -54,10 +57,10 @@ a:link, a:visited {
 
 /* ─── logo mark ───────────── */
 .mark {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
+  /* bottom: 0;
   right: 0;
-  margin-right: 20px;
+  margin-right: 20px; */
   width: 40px;
   height: 40px;
   transition: transform 0.5s ease-in-out; 
@@ -65,7 +68,6 @@ a:link, a:visited {
 
 .mark:hover path {
   fill: blue;
-  /* fill: #4a2545; */
 }
 
 /* ─── photo of me ───────────── */

@@ -23,4 +23,16 @@ document.querySelectorAll('a').forEach(link => {
   link.addEventListener('mouseleave', () => cursor.classList.remove('active'));
 });
 
-console.log(cursor);
+const tabs = document.querySelectorAll('.piece-tab');
+if (tabs.length) {
+  tabs.forEach(pieceTab => {
+    pieceTab.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelectorAll('.piece-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.piece').forEach(p => p.classList.remove('active'));
+      
+      pieceTab.classList.add('active');
+      document.getElementById(pieceTab.dataset.piece).classList.add('active');
+    });
+  });
+}

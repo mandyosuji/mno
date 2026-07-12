@@ -9,26 +9,196 @@
   <script src="../../script.js" defer></script>
 </head>
 <body>
-
-<!-- LOGO MARK-->
-<a href="../../index.html">
-  <svg class="mark" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-    <defs>
-      <style>
-        .cls-1 {
-          fill: #231f20;
-        }
-      </style>
-    </defs>
-    <path class="cls-1" d="M94.24,101.25c-1.99,3.58-9.03,5.84-12.09,5.84-7.83,0-5.98-16.6-5.44-21.91-6.11,4.12-19.52,15.4-23.77,18.99-2.39,1.99-5.31,2.39-7.44,2.39-3.32,0-7.57-1.06-8.9-3.32-1.46-2.39,1.19-18.32,1.86-22.71-10.22,10.09-21.11,21.78-26.16,27.22-1.86,1.99-5.44,2.39-6.9,2.39-3.06,0-5.98-1.73-5.31-4.25.8-3.85,41.43-47.67,44.75-50.59,3.45-2.92,8.37-5.44,11.95-5.44,2.52,0,4.65,1.33,4.65,4.25-.13,1.59-.53,3.85-.93,6.51-1.59,8.23-3.45,16.6-3.85,24.83,7.97-5.44,17.13-11.69,20.45-14.34,3.85-2.79,10.49-5.71,14.47-5.71.93,0,2.26.13,3.19.93,2.13,1.73,2.13,24.43.53,32-.27.93-.53,1.99-1.06,2.92Z"/>
-    <path class="cls-1" d="M157.79,78.27c-4.25,13.54-23.11,29.88-37.18,29.88-13.01,0-18.86-10.49-16.6-21.11,2.79-13.01,19.26-35.19,38.11-35.19,2.39,0,5.84.27,7.83,2.79,5.45.26,12.35,4.12,9.3,18.32-.26,1.59-.8,3.45-1.46,5.31ZM142.65,67.12c-9.16,0-23.77,13.94-25.5,21.91-.4,2.12,0,3.32,2.12,3.32,4.38,0,12.48-4.25,15.8-7.7,4.38-4.51,9.3-13.28,10.22-16.86l.13-.13c-.93-.4-1.86-.53-2.79-.53Z"/>
-  </svg>
-</a>
-
 <!-- MENU -->
 <div class="menu">
-  <a id="index" href="../../index/index.html">index</a>
-  <a id="more" href="../../more/index.html">more</a>
+  <a href="../../index/index.html">index</a>
+  <a href="../../index.html">
+    <svg class="mark" id="layer" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: #4a2545;
+          }
+        </style>
+      </defs>
+      <path class="cls-1" d="M94.24,101.25c-1.99,3.58-9.03,5.84-12.09,5.84-7.83,0-5.98-16.6-5.44-21.91-6.11,4.12-19.52,15.4-23.77,18.99-2.39,1.99-5.31,2.39-7.44,2.39-3.32,0-7.57-1.06-8.9-3.32-1.46-2.39,1.19-18.32,1.86-22.71-10.22,10.09-21.11,21.78-26.16,27.22-1.86,1.99-5.44,2.39-6.9,2.39-3.06,0-5.98-1.73-5.31-4.25.8-3.85,41.43-47.67,44.75-50.59,3.45-2.92,8.37-5.44,11.95-5.44,2.52,0,4.65,1.33,4.65,4.25-.13,1.59-.53,3.85-.93,6.51-1.59,8.23-3.45,16.6-3.85,24.83,7.97-5.44,17.13-11.69,20.45-14.34,3.85-2.79,10.49-5.71,14.47-5.71.93,0,2.26.13,3.19.93,2.13,1.73,2.13,24.43.53,32-.27.93-.53,1.99-1.06,2.92Z"/>
+      <path class="cls-1" d="M157.79,78.27c-4.25,13.54-23.11,29.88-37.18,29.88-13.01,0-18.86-10.49-16.6-21.11,2.79-13.01,19.26-35.19,38.11-35.19,2.39,0,5.84.27,7.83,2.79,5.45.26,12.35,4.12,9.3,18.32-.26,1.59-.8,3.45-1.46,5.31ZM142.65,67.12c-9.16,0-23.77,13.94-25.5,21.91-.4,2.12,0,3.32,2.12,3.32,4.38,0,12.48-4.25,15.8-7.7,4.38-4.51,9.3-13.28,10.22-16.86l.13-.13c-.93-.4-1.86-.53-2.79-.53Z"/>
+    </svg>
+  </a>
+  <a href="../../more/index.html">more</a>
+</div>
+
+<!-- TODO: show title only when active -->
+
+<div class="pieces">
+  <nav class="nav">
+    <a href="#" class="piece-tab" data-piece="poem1">leaving</a>
+    <a href="#" class="piece-tab" data-piece="poem2">crush</a>
+    <a href="#" class="piece-tab" data-piece="prose1">swinging</a>
+    <a href="#" class="piece-tab" data-piece="prose2">lenses</a>
+    <a href="#" class="piece-tab active" data-piece="prose3">montell</a>
+  </nav>
+  
+  <div class="content">
+    <div class="piece" id="poem1">
+      and in the last dregs of April,<br>
+      held breath mingles with dust<br>
+      all around you,<br>
+      you all weathered delicate<br>
+      a mesh of gaunt fragility<br>
+      <br>
+      you glow, winged and mercurial<br>
+      compacting into ribbons of memory<br>
+      phantom as you pass through turnstile<br>
+      you leave me<br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;clockwise<br>
+      floundering<br>
+      frenzied limbs and fluorescence<br>
+      <br>
+      I strip the bed of love<br>
+      stuff it in my mouth<br>
+      cotton clinging to<br>
+      something ransacked<br>
+      &emsp;&emsp;&emsp;and crooked<br>
+      there you are–were–<br>
+      fleeting, beautiful<br>
+      I wanted hands like yours,<br>
+      hands which make softness<br>
+      out of nothing<br>
+      <br>
+      now, I can only look at you<br>
+      through the slim channel of time<br>
+      as you unspool like<br>
+      sediment,<br>
+      like breath hitting the rocks,<br>
+      raising air that haunts as it passes<br>
+      <br>
+      here, I crumple into a gray want<br>
+      which sets me spinning<br>
+      like toy tops<br>
+      how long will I harbor your ghost<br>
+      in the soft places<br>
+      of my stomach?<br>
+      <br>
+      again, I am whistled bare<br>
+      ensconced in pale memory<br>
+      like pearl
+    </div>
+
+    <div class="piece" id="poem2">
+      again I am slipping into fantasy<br>
+      cheeks rouged with slow-moving blood<br>
+      everything humming red<br>
+      <br>
+      so on a clear morning in september,<br>
+      against the shuffling of dappled light,<br>
+      I hold everything<br>
+      &emsp;I want you to be<br>
+      latticed between my fingers<br>
+      <br>
+      and I get caught<br>
+      &emsp;&emsp;&emsp;in all the mechanics of fluttering<br>
+      as you fashion noise<br>
+      lasso it opaque and pith and lovely<br>
+      your hands bleeding whispers<br>
+      &emsp;of everything you have made sing<br>
+      <br>
+      you are the tide going out<br>
+      &emsp;&emsp;&emsp;showing me the molten beauty of fallen things<br>
+      this breath wrangled intimate<br>
+      siphoned stained glass and shiver<br>
+      <br>
+      hold the music in your metal fist<br>
+      let it hum you soft<br>
+      let it give you back your own body<br>
+      return to yourself<br>
+      feathered and torn gentle<br>
+      mouth stained with song<br>
+      <br>
+      I wish I could sing to you
+    </div>
+
+    <div class="piece" id="prose1">
+      <p>Dad liked that the Foss Park Golf Course was cheap, never overcrowded, and a ten-minute drive from home. To the uninformed, there was no shot of finding yourself there except by sheer chance. Once you turn off Green Bay Road, every street yields equally unassuming one-story houses, ones with blue or tan siding and close-cropped midwestern lawns. The entrance is less of an entrance and more of a neighborhood street which ends in a paved parking lot delimited by large rocks. No part of the surrounding shrubbery or suburban charm divulges the course’s existence. But Dad always seemed to get us there by instinct alone. Without fail, we’d reach a bend in the road, and I’d see the worn sign beckoning us in.</p>
+      <p>Foss Park made up for its perceived exclusivity by being public—or is it the other way around? It looks like any other ordinary golf course. To the right—bordering the parking lot—a fleet of golf carts stands at attention, enclosed behind a wooden fence. Two squat brick buildings, neither very large, sit on either side of the asphalt path leading into the course. They house the equipment shop and the Bar & Grill. Straight ahead along the path is the putting green. The driving range is to the right and up a modest hill. And, of course, beyond them both, eighteen holes.</p>
+      <p>That first summer, I was seven. About once a week, my older brother and I were whisked away in the pulsating Illinois heat, our shabby clubs sweating themselves sick. Dad would park and then hoist our bags out. I’d hear him whistling as he selected his own clubs for that day from the ragtag assortment he kept loose in his trunk. Something untangled in him. Then, his movements became languid as the three of us started towards the golf ball dispenser. Dad would slide a crumpled ten into the machine; I’d be mesmerized by the dull clink of the balls falling into their latticed basket. Of course, Dad would carry it, the plastic handle straining under the weight. As soon as we’d made our way up to the driving range, we would stake our claim on three adjacent squares of turf. Unsheathe our drivers from their covers. Dad would divide the balls between us, roughly scattering my portion at my feet. We’d be there for an hour or two, launching balls down into the range.</p>
+      <p>More often than not, we’d be the only ones there on a given afternoon. Unsurprisingly, my childlike efforts—and my brother’s—would sink and fall so terribly shy of the yard markers. A look over at Dad revealed his shots streaking comet-like, way out in the distance. I’d note the way his hands were placed on the shaft of his 4-wood, the bend of his knees, the smooth arc of his swing. I’d copy it all as best as my scrawny limbs could manage. My shots would go a little straighter, rise a little higher, if still not very far. Yet Dad would pump his fist with pride, eyes widening in generous shock. I’d never felt closer to him. I’d never felt more like him.</p>
+      <p>When there was nothing left to shoot, we’d take one last look at the horizon, then turn, walk back down the hill, and drive home. So went the ritual. Unless it was a Friday. Then, if we’d already stayed past dusk, Dad would veer towards the Clubhouse on our way back to the car. He’d pull out a twenty from his wallet and exchange it for battered fried cod in butcher paper. We’d crowd around the fish, the smell of it entrancing, my brother and I practically salivating. Dad would cut it up and the three of us would share. Oftentimes he’d lecture us on something (I don’t remember what).</p>
+      <p style="text-align: center;margin-top: 10px;">*</p>
+      <p>When golf season was over and we were left to our own devices, my brother and I had our real fun. At home, sometimes we were secret agents, legitimized by our ToysRUs walkie-talkies and slinking manner. Other times, we’d ride our bikes (with no hands!) around the empty cul-de-sac one street over. Or create elaborate family dramas with our stuffed animals. Or screech and laugh amongst ourselves about nothing in particular. We were good kids, I like to think, if a bit energetic. Kept ourselves entertained.</p>
+      <p>But we were restless, and Dad wanted us to love what he loved, before we succumbed to that impatience and pity for one’s parents which comes with growing older. The next summer, Dad signed us up for a summer-long program. For fifty-five dollars each, my brother and I would be taught both golf fundamentals and the pillars of good character. We would aim to imitate the good breeding that the sport apparently required. The program consisted of a weekly half-hour lesson on courtesy or respect or something of that sort, followed by practice. Sitting in a half circle in the grass, all the kids would take notes with those miniature golf pencils. Then we’d go out on the course for about an hour. </p>
+      <p>Afterwards, apples would be waiting for us in a cooler full of ice. Shiny with cold, they bobbed and shimmered as if suspended by magic. They were the same red I found upon closing my eyes, right after looking directly into the sun. Except for those moments following the long grueling holes, I have never liked red apples. (They’ve always been Dad’s favorite.)</p>
+      <p>The golfing we did that summer at Foss Park all runs together, the grass and the trees and the holes marked by checkered flags. The benches seemed at rest, spaced out along the course— placed there for the poor schmucks like us who were made to walk. You learn to tune out the jangly click of the clubs that accompanies every step, the awkward weight of the golf bag slung against your back. </p>
+      <p>Sometimes, out there with the quiet, I thought I saw what Dad did: Sun-weary and drenched awake, I imagined him coming alive with awe as a shot soared perfectly straight over the hills. He’d hear the thwack of a well-placed chip and close his eyes in relief. Or it’d all be a disaster, and he’d have to play again. Over and over, a breath, a swing, a scribbled number. I tried to love it. Since I was supposed to. Without complaint, I wore these horrific multicolor plaid shorts and a polo I ironed myself. Practiced my swing. Learned to enjoy pressing my tee into the ground, syringe-like. Memorized the weight of a golf ball in hand.</p>
+      <p style="text-align: center;margin-top: 10px;">*</p>
+      <p>I am older now and I haven’t played in years. Recently, Mom told me: The day I came home from the hospital was a warm afternoon in August, crisp and windless. My father made his newborn daughter’s crib dutifully, yet with some sort of apology in his eyes. He kissed us goodbye and left to play nine holes. The greens were calling, and he had no choice but to answer. She remembers that in the thick of his obsession, he’d play twice a week, sometimes more. And when he wasn’t playing, he’d be here, at home, but really, he was on the golf course.</p>
+      <p>Mom was incredibly patient but absolutely uninterested in golf. I imagine the whole thing took her quite by surprise. When her and Dad met, twenty-odd years ago, he had never set foot on a golf course. Such places were imaginary things to a man grown up amongst land that was used to grow cassava and raise goats. In Nigeria, things had both grit and purpose. As a boy, he would tie together sheets of plastic to make kites—or wad up fabric and wind string around to make a ball to kick around with the other village kids. Back home, there was none of this manicured quasi-civility that takes place on the golf course. No white men looking sidelong at you and driving past with their golf carts and expensive watches and privilege. </p>
+      <p>When Dad came to the U.S. and a friend got him hooked on golf, he played out of stubbornness. The first time, he couldn’t hit the ball. Stood there swinging and missing, his brow furrowed. The challenge of it was tempting. It was a good anger. He’d come down hard on the ball, pummeling it and shanking it to the left, always left.</p>
+      <p>As a kid, I thought this all much simpler. All I knew was that Dad would drag us to pawn shops on the weekends to look at clubs. He’d find coupons online for a cheap tee time, call one of his friends on the drive home from work to trash-talk them into playing an unplanned nine holes. He’d disappear into the obsession. If the weather was nice enough, there would be a note on the kitchen table when I got home from school. “I couldn’t resist,” it would say. And he couldn’t. Golf took him over, brought out the extremes in him. It was as if he was a magnet drawn to the course. Often, he’d perform kitchen re-enactments of games he’d won. His arms would gesture and swing wildly, his voice rising as he recounted a triumph. He’d remember the score hole by hole, chart the path of each hit with his hands as he grinned. When recounting a loss, he’d shake his head. He’d watch the professionals on TV and bemoan their failures. Practice his swing in the bathroom, hands fisted. “This stupid game,” he would say. Even when he broke clubs in frustration, he had to keep going back. Because there were the other games, the ones where every hit was perfect and you had no idea why.</p>
+      <p>Dad had surgery for sciatica a couple years ago and his back hasn’t been the same since. When it got warm again, he bought a right-handed glove, taught himself to play lefty. It didn’t really take. Last year was the first time in ages that he didn’t play at all. Not once the whole summer did he come back sweaty, smelling of grass with a gleam in his eyes. There were no hours of not knowing where he was and realizing there’s only one place he could be—out with the unending grass, squinting into the distant sun.</p>
+    </div>
+
+    <div class="piece" id="prose2">
+      <p>It comes into view, the blurry, smug hot air balloon hovering somewhere above the road. I only know it’s a hot air balloon because she’s told me so, the assistant with the soft smile and the pitying eyes. All I can make out for myself is a fuzzy, bright-red daub positioned roughly center. My old nemesis. It floats above the presumed grass—a muddled pea green swath on either end of the gray strip leading off into the distance. Focus on the balloon, the assistant says. I don’t know her name, the plastic clip-on nametag too far away for me to make out. </p>
+      <p>I look at the picture through the lens like she tells me. Fidget with the hands in my lap. The road and the field and the balloon remain out of focus. If there are clouds in the sky, to me they blend into the rest of its blue. For all I know, there could be far-off birds whirling above cows that dot the surrounding fields. I must assume, must gather what little evidence I can. It would be nice to know for sure.</p></p>
+      <p>The assistant is scribbling numbers down onto her clipboard. A sense of scrutiny and the overhead florescent lights remind me too much of specimens cut open on the lab table. Last year at school we dissected earthworms—peeled their skin back, pinned it down, catalogued their insides. They didn’t squirm because they were already dead. My chin starts to quiver against the plastic lip of the machine, some clunky white sterilized unpleasant thing. I can’t overcome the urge to squint and pull away. The assistant furrows her brow, her smile gone. </p>
+      <p>She says something reassuring. Then tells me to put my face back into the contraption, that it won’t be much longer. Soon a puff of air will dart into each of my reluctant eyes—the only ones I have. They say it measures the pressure. I cautiously nestle my face back where it should be, smell the sting of rubbing alcohol. I’m unsure whether the tears begin because of the impending discomfort of the puff of air, or simply a pathetic awareness of myself. Either way, this is the moment I abandon all dignity. Suddenly my breaths come up short. I blink and blink to no avail. Wetness gathers in beads on my eyelashes. Then the tears spill over down onto my cheeks. </p>
+      <p>I sit back, collect myself. Just a creature wet-eyed, blinded, small. Aside from the assistant standing awkwardly behind the equipment, my mother is in the room, even though I am too old for that and have done this all before. She leans over and squeezes my hand. I silently wipe the tears away, avoiding eye contact. Square my shoulders and sit forward with my eyes open, accepting. I flinch, then still. The puff of air is over quickly.</p>
+      <p>I am eleven, or maybe twelve, it doesn’t matter. I’ve lost track, from my later vantage. It can feel as if every time I’ve been in this room is faintly visible at once, like overlaid sheets of tracing paper. (Though this memory we’re in now was the first and only time I’d ever cried mid-examination.) </p>
+      <p>It happens annually, my prescribed once-a-year torment. My eye exam is at the Lenscrafters inside the mall. It’s directly across from the Rainforest Café, outside of which a plastic snake flicks its tongue robotically while coiled round a plastic vine-covered tree. From outside you can see the tanks of real live fish and the faux-happy hostesses. Every so often, the tacky fog machine in the corner pumps out more illusion. Some lights flash, meant to be lightning. A myriad of animatronic animals trumpet and roar as the simulated thunderstorm passes through. The scene looks almost believable, if you squint and have the raw faith of a five-year-old. In any case, it makes this Lenscrafters seem like the wrong place to undergo serious examinations of one’s optical well-being. The whole thing would be laughable, if I were not the one in the padded chair getting the insides of my eyes blown on and judged. </p>
+      <p>Having survived the whole tearing-up debacle, we move to the next stage of humiliation. I am now in the room with various lenses stacked neatly on the side table. Here we have the man who will ordain my fate: the optometrist. He, at least, has the decency to look grave and faintly apologetic. As if he, too, knows that all this prodding is too much. That I’d prefer my eyes be left alone. Regardless, he is obligated to proceed through all the motions. On his computer, he pulls up the large-scale photos of my retinas, which neither of us want to look at. Says everything seems normal, then clicks out of the window. He shines a bright light directly in my eyes which almost makes me hiss, checks if I have become color blind since last year, witnesses my being made a fool by that chart with all the letters and blobs. I sweat a little each time he asks me to pick between option one or option two. He waits as I pause and painstakingly compare them. Sometimes I make him go back and forth more than once so I can be sure. It’s all rather embarrassing.</p>
+      <p>I can’t help but forgive the optometrist. He doesn’t know that these days, every night before I go to bed, I look at myself in the mirror mounted on the back of my bedroom door. I stare directly into my own pupils for some minutes, then I blink and turn off the light. Eyes wide open, I lie there on my bed and think about going blind in my sleep. Convince myself that I can’t see the sliver of moonlight coming through the blinds. Every now and then I get back up, turn on the light, look for a moment longer. Check to make sure that I still look how I do in my own memory. It’s easy to pretend that the worst thing that can happen would be losing my sight. Pretend that is the biggest unending darkness. (The one coming for us all.) At least I can prepare myself. </p>
+      <p>I’m not sure when this strange routine started, or the fear. It wasn’t always this way. My first pair of glasses was in the second grade. I was unconcerned, naïve, not yet exposed to the true life of the myopic. The leering fingers held up, mocking. How many? Triumphant and wicked glee from those who just can’t believe someone’s sight could be so bad. (OD) -6.00, (OS) -4.50, if you must know.</p>
+      <p>Seven-year-old me used to imagine that someday I would have perfect vision and listen to podcasts and muse on far-off objects. That if I ate enough carrots and looked long distances in the sun, this smudgy period could be but a blip in my visual record. But the optometrist checks his notes, pronounces me more sightless than last year. I sigh. I knew it was coming, having read by lamplight and stayed indoors since I saw him last. </p>
+      <p>I suppose I’d pre-mourned this prognosis, what with my stint back there in the other room. But by now I am used to the news of worsening. Perhaps I have brought it on myself. I can’t look at anyone putting in contacts, and something inside me whimpers at that scene in Alice and Wonderland (2010) when the Bandersnatch gets an eye yanked out. Via a cruel logic, it makes sense that I am doomed to dwell often on what I least like to think about. Every time I struggle to make out a friend’s face from many paces away. Or strain to read small text. Or rub my eyes inadvertently beneath my thick-lensed glasses. My mind gets stuck thinking about my sclera and cornea and irises. The limbal ring, pupil, retina. All the other parts I can’t call by name. It’s all so fragile, two orbs fleshy and exposed.</p>
+      <p>None of us enjoys going to any sort of physician, surely. But at the optometrist’s, the whole affair feels truly intimate. It’s not the same as hitting my knee with a hammer or measuring how tall I am or even taking X-rays of my teeth. Somehow, it’s all so different. I don’t think about my knees or limbs or teeth with the same daunting reverence. For whatever reason, I never worry that any of them will suddenly stop working. Only that the dark, quiet sheet of night will become all there is. It’s a hypnotic fear. One that lingers reliably within arm’s reach. Comforting in its sameness.</p>
+      <p>So again, I am thinking of the image they show at the beginning of each trip to the optometrist. The one with the hot air balloon smack-dab in the center. The other day, I performed a radical act of exposure therapy. I looked up the image online. It had never once occurred to me to do this. I’d never thought to see for myself the scene which haunts me still, reminds me that there is more to be noticed than I can notice. But alone, with my glasses on, I blew it up to about 500 times the regular size, took it all in. It turns out there’s a car about halfway down the road that I’ve never seen before. The hot air balloon is other colors besides red. Whisps of clouds surround it. It’s sort of beautiful, now that I see it. I memorize the textures, the sharpness. All so clear.</p>
+
+    </div>
+
+    <div class="piece active" id="prose3">
+      <h4 style="margin-top:0px">FIRST DISCOVERY</h4>
+      <p>No one wants to be preached at. So Montell Fish sang in muddled falsetto. His lyrics were raw, almost painfully earnest. When I found him, they were all about God.</p>
+      <p class="stanza">If I could write You a song, Lord, I wouldn't hold nothing back<br>
+      I would tell You my all; to my sin, I've been running back<br>
+      And I can't hold it all, burden is too heavy on my soul<br>
+      Lord, please come cleanse me, come make me reign whole<br>
+      'Cause I need Your—, feeling like I'm in Job<br>
+      Feeling like I've been losing touch with my soul<br>
+      And I don't know where to go<br>
+      Father, bring me to the light, I can't find my way back home<br>
+      I need You now</p>
+      <p>I remember the moment well enough, even though it was eight years ago. My older sister was home, probably for Christmas. We were sitting at the table in our living room, which is mahogany and, in my memory, Last Supper-length. She gently pressed her earbuds into my ears, pressed play without preamble. Ever the paradigm of a youngest sister, I received the offering without resistance. Through the earbuds came a voice that was decidedly angelic, yet simultaneously guttural. True.</p>
+      <p>Montell rumbled the opening lines of the album I would listen to time and time again. The beginning verse ricocheted between left and right ear. I pushed the earbuds in further, intrigued. Stayed there for the next 51 minutes as I heard someone be more honest before God than I knew was possible.</p>
+      <p>He was not the man on the corner with a megaphone, spewing condemnation at passerby while an audience pretended to ignore him. He was not the hunched-over Asian lady who lies in wait at an intersection, shakily forcing a flyer into your palms, or who walks several uncomfortably close paces next to you as she pries at your belief in Jesus. Montell was fervent in a different way.</p>
+      <h4>REBIRTH</h4>
+      <p>In earlier years, my parents orbited religion as something heavy yet negotiable. The way I remember it, they realized they had in common a faint attachment to Catholicism, shrugged, and tried to haul us all to church more Sundays than not. So, faith was something gauzy and far-off. I kept it at arm’s length. We all did.</p>
+      <p>In my mind’s eye, I see the stone font of holy water stationed at the entrance of St. Paul the Apostle Catholic Church. I dip my fingers halfheartedly into the forgiving wet. My knees dimple the cushioned kneeler at noontime mass, all the way in the back where God cannot see me. I do not know what Lent is, or why the priest is dressed like that, what it means for a name to be hallowed. I do the sign of the cross over and over and feel nothing.</p>
+      <p>But here, in our living room with my elbow propped on the mahogany, I encounter something new. A veil torn in two, confession with no holds barred. Listening to Montell feels like sitting with him as he sits with God. Every song feels like a prayer, one I didn’t know I could say. </p>
+      <p class="stanza">Sometimes I feel like Peter<br>
+      Denied You and I cannot deny that I did<br>
+      Can I rest my head on Your shoulders again?</p>
+      <p>Suddenly, there was no hiding from God. Montell drags you in up close, zooms in to blood freshly drawn. When Montell sang about Peter, listener and vocalist alike seemed to collapse into one single denier-of-Christ. The lyrics hit my chest—a confession of guilt that stripped me bare. Yet this understanding felt like release, a breath exhaled. Permission, of a sort, to be imperfect before God.</p>
+      <p>At my church now, Pastor wears his Nikes onstage, and his sermon notes are riddled with typos. I think this is who God wants us to be. Not the super-Christians who blankly smile and perform belief. Not the buttoned-up amens in harmony. Not the people who plead faultlessness and cast judgement from their blinding cloud. The plank in your own eye, etcetera. Let’s stop pretending. Sometimes I think that’s what Montell is trying to say.</p>
+      <p>There is an undeniable desperate clamoring in the way that he sings. This is a man in need. You can almost hear the muffling of bedroom walls, the atmosphere of keening secrecy. Every word is between him and God, you’re just listening in. </p>
+      <p class="stanza">I don't know what else, to say<br>
+      If You're not here with me<br>
+      Then I'm surely empty<br>
+      Father, I need You right now<br>
+      I know that You're all around<br>
+      But I just need to hear the sound<br>
+      Of Your voice, if I can</p>
+      <p>This is not the tired bore of CCM where we all nod our heads thoughtfully and unfurl our palms at all the right moments—to what, play holy? Who do we think we’re fooling? No, this is real desire. More real than the vaguely inspirational pop where Jesus gets treated in the same vein as cheesy Hallmark cards. Montell’s songs tilt on the axis of Psalm-like cries for more. He says it all in that wilting voice and you cannot help but listen. </p>
+      <h4>PERSONA</h4>
+      <p>The first sign was the shaved head. A few years after my first encounter with his music, Montell deleted everything from his Instagram page and posted a photo of himself shorn, blurry. At first, I wasn’t sure it was him.</p>
+      <p>But there he was, the smooth planes of his face. The dreads were gone, but the flat sadness of his brown eyes was the same. Montell Fish remained the name I used for him, but it was never his given name, Montell Frazier. At the same time, he was Lord’s Child, then ghostboi, then dj gummy bear. A conveyor belt of identities to slip into and out of at will.</p>
+      <p>Montell exists in chorus with himself. On his songs, you can often siphon out a ghostly doubled vocal track settled just behind the melody. Or one of his aliases will release a song that lists another as featured. This all, for some reason, disturbs me. That someone can be two different people at once. What’s worse is that his music takes roughly the same shape, regardless of what name he writes it under. Almost as if he relishes the continuous introduction, the slight moment of unrecognizability. It’s trippy, makes me feel off-balance. The whole thing reminds me of nesting dolls, if they were identical. He is a man inside a man inside a man.</p>
+      <p>Still, his music has a consistent smoky quality, a lofi haze pulsing and whispered. That first album I listened to was released under the Lord’s Child moniker. It was centered around coming back to God after time spent dormant, and every song rings with overt praise. So too, did all the songs released as Montell Fish around that time, such as “Holy God” and “On my Way.” </p>
+      <p>Hence why the first reinvention came as such a shock. Suddenly Montell seemed to compartmentalize his faith into something decidedly in the past. Overnight, his online presence devolved into cryptic captions and shadowy images and a glaring lack of God-centered songs. He was something new.</p>
+      <p>The truly dedicated fans somehow pieced together that he had gone through a breakup, with a girl named Jamie, which was the name of his new album. I guess he went through two. One with her, and one with God.</p>
+
+    </div>
+  </div>
 </div>
 
 <!-- CURSOR? -->
