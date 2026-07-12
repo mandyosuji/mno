@@ -2,11 +2,25 @@
 const words = ["creative", "poet", "quilter", "web designer", "writer"];
 let i = 0;
 const span = document.querySelector(".cycle");
-
-function next() {
-  span.textContent = words[i];
-  i = (i + 1) % words.length;
+if (span) {
+  function next() {
+    span.textContent = words[i];
+    i = (i + 1) % words.length;
+  }
+  
+  next(); // set first word immediately
+  setInterval(next, 2000); // auto-cycle every 2 seconds
 }
 
-next(); // set first word immediately
-setInterval(next, 2000); // auto-cycle every 2 seconds
+//cursor?
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('mouseenter', () => cursor.classList.add('active'));
+  link.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+});
+
+console.log(cursor);

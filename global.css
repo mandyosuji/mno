@@ -3,8 +3,27 @@
 
 /* across-the-board styling */
 
-html {
-  background-color: #d7de50;
+/* background-color: #d7de50; */
+
+html, body, a {
+  cursor: none;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #d7de50;
+  mix-blend-mode: exclusion;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor.active {
+  background-color: #e74c3c; /* Changes to red */
+  transform: translate(-50%, -50%) scale(1.8); /* Scales up slightly */
 }
 
 body {
